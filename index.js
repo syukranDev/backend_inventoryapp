@@ -17,6 +17,8 @@ app.use (function (err, req, res, next){
     else next();
 });
 
+app.get('/', (req, res) => { return res.send({ status: 'success' }) } )
+
 app.use('/api/inventory', inventoryRouter)
 
 app.use('/api/auth', authRouter)

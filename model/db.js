@@ -3,10 +3,8 @@
 const Sequelize = require('sequelize');
 require('dotenv').config()
 
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
+const sequelize = new Sequelize(process.env.DB_CONNECTION_STRING, {
   dialect: 'postgres',
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
   timezone: process.env.DB_TIMEZONE,
   dialectOptions: {
     useUTC: true
