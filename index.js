@@ -27,3 +27,5 @@ app.use('/api/user', userRouter)
 app.listen(PORT, () => {
     console.log(`Connected to my server at port ${PORT}`)
 })
+
+module.exports = app;
